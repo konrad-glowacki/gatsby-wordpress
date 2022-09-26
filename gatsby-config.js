@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby WordPress`,
@@ -10,7 +12,7 @@ module.exports = {
     {
       resolve: `gatsby-source-wordpress`,
       options: {
-        url: `https://gatsbyheadless.wpengine.com/graphql`,
+        url: process.env.GRAPHQL_URL,
       },
     },
     {
